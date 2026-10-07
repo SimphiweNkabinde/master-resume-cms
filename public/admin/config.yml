@@ -20,6 +20,17 @@ singletons:
       - { label: GitHub, name:  github_url, widget: string , type: url  }
 
 collections:
+  - name: skills
+    label: Skills
+    icon: handyman
+    folder: /content/skills
+    summary: '{{domain}} - {{name}} ({{proficiency}})'
+    thumbnail: icon
+    fields:
+      - {label: Name, name: name, widget: string}
+      - {label: Domain, name: domain, widget: select, options: ['programming language', 'frontend', 'backend', 'databases', 'AI', 'UI/UX design', 'collaboration', 'development tools', 'CMS', 'testing', 'messaging', 'monitoring', 'devops']}
+      - {label: Proficiency, name: proficiency, widget: select, options: ['strong', 'working', 'familiar']}
+      - {label: Icon, name: icon, widget: image, required: false}
   - name: education
     label: Education
     icon: school
@@ -34,3 +45,4 @@ collections:
       - { label: End date, name: enddate, widget: datetime, type: date }
       - { label: Description, name: description, widget: richtext, required: false }
       - { label: Media, name: media, widget: file, required: false}
+  
