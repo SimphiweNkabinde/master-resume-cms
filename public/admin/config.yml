@@ -20,14 +20,6 @@ singletons:
       - { label: GitHub, name:  github_url, widget: string , type: url  }
 
 collections:
-  - name: posts
-    label: Posts
-    label_singular: Post
-    folder: /content/posts
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime, type: date }
-      - { label: Body, name: body, widget: richtext }
   - name: education
     label: Education
     icon: school
