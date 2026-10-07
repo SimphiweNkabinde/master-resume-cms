@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs & generated static files
+dist/
+build/
+.output/
+.nuxt/
+.svelte-kit/
+public/build/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and OS logs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
