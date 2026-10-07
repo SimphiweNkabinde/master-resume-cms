@@ -24,19 +24,20 @@ collections:
     label: Skills
     icon: handyman
     folder: /content/skills
-    summary: '{{domain}} - {{name}} ({{proficiency}})'
+    summary: '{{name}} | {{domain}} ({{proficiency}})'
     thumbnail: icon
     fields:
       - {label: Name, name: name, widget: string}
       - {label: Domain, name: domain, widget: select, options: ['programming language', 'frontend', 'backend', 'databases', 'AI', 'UI/UX design', 'collaboration', 'development tools', 'CMS', 'testing', 'messaging', 'monitoring', 'devops']}
       - {label: Proficiency, name: proficiency, widget: select, options: ['strong', 'working', 'familiar']}
       - {label: Icon, name: icon, widget: image, required: false}
+    sortable_fields: [name, domain, proficiency]
   - name: education
     label: Education
     icon: school
     label_singular: education
     folder: /content/education
-    summary: '{{qualification}} ({{startdate}} - {{enddate}})'
+    summary: "{{qualification}} | {{startdate | date('MMM YYYY')}} - {{enddate | date('MMM YYYY')}}"
     thumbnail: '/media/thumbnails/{{slug}}.webp'
     fields:
       - { label: Institution, name: institution, widget: string }
@@ -45,4 +46,20 @@ collections:
       - { label: End date, name: enddate, widget: datetime, type: date }
       - { label: Description, name: description, widget: richtext, required: false }
       - { label: Media, name: media, widget: file, required: false}
+  - name: experience
+    label: Work Experience
+    icon: work
+    folder: /content/experience
+    summary: "{{job_title}} | {{startdate | date('MMM YYYY')}} - {{enddate | date('MMM YYYY')}}"
+    thumbnail: '/media/thumbnails/{{slug}}.webp'
+    fields:
+      - {label: Job Title, name: job_title}
+      - {label: Organization, name: organization}
+      - {label: Location, name: location}
+      - {label: location Type, name: location_type, widget: select, options: ['on-site', 'hybrid', 'remote']}
+      - {label: Employment Type, name: employment_type, widget: select, options: ['full-time', 'part-time', 'contract', 'Internship']}
+      - { label: Start date, name: startdate, widget: datetime, type: date }
+      - { label: End date, name: enddate, widget: datetime, type: date, required: false }
+    sortable_fields: [organization, startdate, job_title]
+      
   
