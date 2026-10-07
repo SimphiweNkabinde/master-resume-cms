@@ -27,3 +27,14 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime, type: date }
       - { label: Body, name: body, widget: richtext }
+  - name: education
+    label: Education
+    label_singular: education
+    folder: /content/education
+    fields:
+      - { label: Institution, name: institution, widget: string }
+      - { label: Qualification, name: qualification, widget: string }
+      - { label: Start date, name: startdate, widget: datetime, type: date }
+      - { label: End date, name: enddate, widget: datetime, type: date }
+      - { label: Description, name: description, widget: richtext }
+      - { label: Media, name: media, widget: file,}
