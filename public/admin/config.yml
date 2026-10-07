@@ -7,6 +7,17 @@ backend:
 media_folder: /public/media
 public_folder: /media
 
+singletons:
+  - name: profile
+    label: Profile
+    file: content/profile.yaml
+    fields:
+      - { label: First Name, name: firstname }
+      - { label: Last Name, name: lastname }
+      - { label: Professional Title, name:  professional_title }
+      - { label: LinkedIn, name:  linkedin_url, widget: string , type: url }
+      - { label: GitHub, name:  github_url, widget: string , type: url  }
+
 collections:
   - name: posts
     label: Posts
