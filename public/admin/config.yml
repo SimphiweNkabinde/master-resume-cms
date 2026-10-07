@@ -10,6 +10,7 @@ public_folder: /media
 singletons:
   - name: profile
     label: Profile
+    icon: account_circle
     file: content/profile.yaml
     fields:
       - { label: First Name, name: firstname }
@@ -29,12 +30,15 @@ collections:
       - { label: Body, name: body, widget: richtext }
   - name: education
     label: Education
+    icon: school
     label_singular: education
     folder: /content/education
+    summary: '{{qualification}} ({{startdate}} - {{enddate}})'
+    thumbnail: '/media/thumbnails/{{slug}}.webp'
     fields:
       - { label: Institution, name: institution, widget: string }
       - { label: Qualification, name: qualification, widget: string }
       - { label: Start date, name: startdate, widget: datetime, type: date }
       - { label: End date, name: enddate, widget: datetime, type: date }
-      - { label: Description, name: description, widget: richtext }
-      - { label: Media, name: media, widget: file,}
+      - { label: Description, name: description, widget: richtext, required: false }
+      - { label: Media, name: media, widget: file, required: false}
