@@ -5,7 +5,7 @@ backend:
   repo: SimphiweNkabinde/master-resume-cms
 
 media_folder: /public/media
-public_folder: SimphiweNkabinde/master/resume/media
+public_folder: SimphiweNkabinde/master-resume-cms/media
 
 singletons:
   - name: profile
