@@ -67,7 +67,7 @@ collections:
     folder: /content/certifications
     summary: '{{name}}'
     fields:
-      - {label: name, name: name}
+      - {label: Name, name: name}
       - {label: Issuing Organization, name: issuing_organization}
       - {label: Issue Date, name: issue_date, widget: datetime, type: date}
       - {label: Expiration Date, name: expiration_date, widget: datetime, type: date, required: false}
